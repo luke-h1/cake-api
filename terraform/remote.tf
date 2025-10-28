@@ -2,9 +2,9 @@ data "terraform_remote_state" "vpc" {
   backend   = "s3"
   workspace = var.env
   config = {
-    bucket         = "cake-${var.env}-terraform-state"
-    key            = "vpc/${var.env}.tfstate"
-    region         = "eu-west-2"
-    encrypt        = true
+    bucket  = "cake-${var.env}-terraform-state"
+    key     = "vpc/${var.env}.tfstate"
+    region  = "eu-west-2"
+    encrypt = true
   }
 }
