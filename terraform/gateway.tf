@@ -93,10 +93,10 @@ resource "aws_apigatewayv2_integration" "lambda" {
 # ROUTES 
 ##############################################################################
 resource "aws_apigatewayv2_route" "lambda_route_proxy" {
-  api_id         = aws_apigatewayv2_api.lambda.id
-  target         = "integrations/${aws_apigatewayv2_integration.lambda.id}"
-  route_key      = "GET /api/cakes"
-  operation_name = "get cakes"
+  api_id             = aws_apigatewayv2_api.lambda.id
+  target             = "integrations/${aws_apigatewayv2_integration.lambda.id}"
+  route_key          = "GET /api/cakes"
+  operation_name     = "get cakes"
   authorizer_id      = var.env == "staging" ? aws_apigatewayv2_authorizer.api_key.id : null
   authorization_type = var.env == "staging" ? "CUSTOM" : null
 }

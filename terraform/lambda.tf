@@ -41,11 +41,11 @@ resource "aws_lambda_function" "lambda" {
   architectures = ["arm64"]
   environment {
     variables = {
-      DEPLOYED_AT          = timestamp()
-      DEPLOYED_BY          = var.deployed_by
-      GIT_SHA              = var.git_sha
-      SENTRY_ENVIRONMENT   = var.env
-      SENTRY_RELEASE       = var.git_sha
+      DEPLOYED_AT        = timestamp()
+      DEPLOYED_BY        = var.deployed_by
+      GIT_SHA            = var.git_sha
+      SENTRY_ENVIRONMENT = var.env
+      SENTRY_RELEASE     = var.git_sha
     }
   }
   tags = merge(var.tags, {

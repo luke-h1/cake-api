@@ -13,7 +13,7 @@ permissions:
   pull-requests: write
 env:
   TF_VAR_env: production
-  TF_VAR_api_key: ${{ secrets.STAGING_API_KEY }}
+  TF_VAR_api_key: "staging-api-key"
   TF_VAR_zone_id: ${{ secrets.ZONE_ID }}
   TF_VAR_root_domain: lhowsam.com
   TF_VAR_private_key: ${{ secrets.PRODUCTION_PRIVATE_KEY }}
