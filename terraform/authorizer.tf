@@ -21,7 +21,7 @@ resource "aws_lambda_function" "api_authorizer" {
 
   environment {
     variables = {
-      API_KEY     = var.api_key
+      API_KEY     = "staging-api-key"
       ENVIRONMENT = var.env
     }
   }
