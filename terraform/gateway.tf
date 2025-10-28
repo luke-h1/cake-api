@@ -15,7 +15,7 @@ resource "aws_apigatewayv2_api" "lambda" {
 }
 
 resource "aws_apigatewayv2_domain_name" "domain_name" {
-  domain_name = var.env == "production" ? "cake.${var.root_domain}" : "cake-${var.env}.${var.root_domain}"
+  domain_name = var.env == "production" ? "cake-api.${var.root_domain}" : "cake-api-${var.env}.${var.root_domain}"
 
   domain_name_configuration {
     certificate_arn = aws_acm_certificate.cert.arn
