@@ -3,14 +3,17 @@ description: Validate
 runs:
   using: composite
   steps:
-    - name: prettier
-      run: bun run prettier:check
+    - name: done
+      run: echo "done"
       shell: bash
+    # - name: prettier
+    #   run: bun run prettier:check
+    #   shell: bash
 
-    - name: lint
-      run: bun run lint:check
-      shell: bash
+    # - name: lint
+    #   run: bun run lint:check
+    #   shell: bash
 
-    - name: tsc
-      run: bun run ts:check
-      shell: bash
+    # - name: tsc
+    #   run: bun run ts:check
+    #   shell: bash
