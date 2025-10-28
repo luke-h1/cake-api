@@ -5,7 +5,6 @@ data "terraform_remote_state" "vpc" {
     bucket         = "cake-${var.env}-terraform-state"
     key            = "vpc/${var.env}.tfstate"
     region         = "eu-west-2"
-    dynamodb_table = "cake-${var.env}-terraform-state-lock"
     encrypt        = true
   }
 }

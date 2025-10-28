@@ -1,5 +1,5 @@
 {
-  "name": "@foam-proxy/lambda",
+  "name": "@cake/lambda",
   "version": "0.0.1",
   "scripts": {
     "build": "esbuild --bundle --minify --keep-names --sourcemap --sources-content=false --target=node22 --platform=node --outfile=dist/index.js src/index.ts",
